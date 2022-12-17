@@ -10,4 +10,4 @@ Builder.compile(
 )
 
 if input("Do you want to package and upload the latest build (Y/n):") == "Y":
-    Builder.upload_package()
+    Builder.upload_package("cp310")
