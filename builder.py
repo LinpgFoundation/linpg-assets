@@ -1,13 +1,27 @@
-from linpgtoolbox.builder import Builder  # type: ignore
+from linpgtoolbox.builder import Builder
 
 # compile all files
 additional_files: tuple[str, ...] = ("README.md", "LICENSE")
 Builder.compile(
     "linpgassets",
-    update_the_one_in_sitepackages=False,
-    include_pyinstaller_program=True,
     additional_files=additional_files,
+    update_the_one_in_sitepackages=True,
+    include_pyinstaller_program=True,
 )
 
-if input("Do you want to package and upload the latest build (Y/n):") == "Y":
-    Builder.upload_package("cp310")
+# prompt compile is done
+for i in range(2):
+    print("")
+print("--------------------Done!--------------------")
+for i in range(2):
+    print("")
+
+# upload the latest build
+"""
+match input("Do you want to package and upload the latest build (Y/n):"):
+    case "Y":
+        Builder.build()
+        Builder.upload()
+    case "N":
+        Builder.remove("src")
+"""
