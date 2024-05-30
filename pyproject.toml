@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "linpgassets"
-version = "23.10"
+version = "24.6"
 authors = [
     {name = "Linpg Foundation", email = "yudong9912@gmail.com"},
 ]
